@@ -1,0 +1,180 @@
+/* Importación de la fuente de Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Estilos globales y reset */
+:root {
+  --blue-color: #1f8b46;
+  --gray-light-color: #f7f7f7;
+  --text-color: #333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--gray-light-color);
+}
+
+/* Contenedor principal del CV */
+.cv-container {
+  display: flex;
+  max-width: 900px;
+  margin: 20px auto;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+/* Columna Izquierda */
+.columna-izquierda {
+  background-color: var(--blue-color);
+  color: white;
+  width: 35%;
+  padding: 30px 25px;
+}
+
+.columna-izquierda h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.columna-izquierda ul {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+.columna-izquierda li {
+  margin-bottom: 5px;
+}
+
+.columna-izquierda a {
+  color: white;
+  text-decoration: none;
+}
+
+.columna-izquierda a:hover {
+  text-decoration: underline;
+}
+
+/* Foto de perfil */
+.foto-perfil {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.foto-perfil .foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+}
+
+/* Columna Derecha */
+.columna-derecha {
+  width: 65%;
+  padding: 40px;
+}
+
+.columna-derecha h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--blue-color);
+  margin-bottom: 5px;
+}
+
+.columna-derecha p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.columna-derecha h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--blue-color);
+  margin-top: 30px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.columna-derecha .resumen p {
+  font-size: 0.95rem;
+}
+
+.columna-derecha .experiencia ul {
+  list-style: none;
+  padding-left: 15px;
+}
+
+.columna-derecha .experiencia li {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.columna-derecha .experiencia li::before {
+  content: "•";
+  position: absolute;
+  left: -15px;
+  top: 10px;
+  color: var(--blue-color);
+  font-size: 1.5em;
+  line-height: 0;
+}
+
+.columna-derecha .trabajo {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.columna-derecha .trabajo h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.columna-derecha .trabajo .empresa {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.columna-derecha .trabajo .tiempo-exp {
+  font-size: 0.85rem;
+  color: #999;
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+
+/* Media Queries para diseño responsive */
+/*
+@media (max-width: 768px) {
+  .cv-container {
+    flex-direction: column;
+    margin: 0;
+    border-radius: 0;
+  }
+  .columna-izquierda,
+  .columna-derecha {
+    width: 100%;
+    padding: 20px;
+  }
+}
+*/
